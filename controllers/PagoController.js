@@ -1,16 +1,19 @@
+const { pagos } = require('../models/data');
+
 class PagoController {
   constructor() {
-    this.pagos = [
-      { id: 1, clienteId: 1, monto: 20, fechaPago: '2025-06-01' },
-      { id: 2, clienteId: 2, monto: 50, fechaPago: '2025-06-03' }
-    ];
-    this.nextId = 3;
+    this.pagos = pagos;
+    this.nextId = this.pagos.length > 0
+      ? Math.max(...this.pagos.map(p => p.id)) + 1
+      : 1;
   }
 
+  // GET /pagos
   listar = (req, res) => {
     res.render('pagos/listar', { pagos: this.pagos });
   };
 
+  // POST /pagos
   agregar = (req, res) => {
     const { clienteId, monto, fechaPago } = req.body;
     const nuevoPago = {
