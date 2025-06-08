@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Membresías - GymApp</title>
+</head>
+<body>
+  <h1>Listado de Membresías</h1>
+  <ul>
+    <% membresias.forEach(membresia => { %>
+      <li>
+        <strong>Membresía #<%= membresia.id %></strong><br>
+        Cliente ID: <%= membresia.clienteId %><br>
+        Tipo: <%= membresia.tipo %><br>
+        Inicio: <%= membresia.fechaInicio %><br>
+        Vencimiento: <%= membresia.fechaVencimiento %>
+      </li>
+      <hr>
+    <% }) %>
+  </ul>
+</body>
+</html>

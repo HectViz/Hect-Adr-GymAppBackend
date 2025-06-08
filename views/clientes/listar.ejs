@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clientes - GymApp</title>
+</head>
+<body>
+  <h1>Listado de Clientes</h1>
+  <ul>
+    <% clientes.forEach(cliente => { %>
+      <li>
+        <strong><%= cliente.nombre %></strong><br>
+        Email: <%= cliente.email %><br>
+        Teléfono: <%= cliente.telefono %><br>
+        <a href="/clientes/<%= cliente.id %>">Ver Detalles</a>
+      </li>
+      <hr>
+    <% }) %>
+  </ul>
+</body>
+</html>

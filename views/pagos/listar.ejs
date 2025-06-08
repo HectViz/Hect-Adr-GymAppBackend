@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagos - GymApp</title>
+</head>
+<body>
+  <h1>Fechas de pago</h1>
+  <ul>
+    <% pagos.forEach(p => { %>
+      <li>
+        Cliente <%= p.clienteId %> pagó $<%= p.monto %> el <%= p.fechaPago %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
