@@ -97,8 +97,8 @@ hectviz-hect-adr-gymappbackend/
 1. Clonar el repositorio:
 
 ```
-git clone https://github.com/hectviz/hectadr-gymbackend.git
-cd hectadr-gymbackend
+git clone https://github.com/HectViz/Hect-Adr-GymAppBackend.git
+cd Hect-Adr-GymAppBackend
 ```
 
 2. Instalar dependencias:
